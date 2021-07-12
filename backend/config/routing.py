@@ -11,7 +11,7 @@ application = ProtocolTypeRouter({
     'http': get_asgi_application(),
     'websocket': TokenAuthMiddlewareStack( 
         URLRouter([
-            path('config/', TaxiConsumer.as_asgi()),
+            path('taxi/', TaxiConsumer.as_asgi()),
         ])
     ),
 })
